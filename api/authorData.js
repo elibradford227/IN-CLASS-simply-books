@@ -29,10 +29,10 @@ const getSingleAuthor = (firebaseKey) => new Promise((resolve, reject) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-    }, 
+    },
   })
     .then((response) => response.json())
-    .then((data) => resolve(data)) 
+    .then((data) => resolve(data))
     .catch(reject);
 });
 
@@ -42,7 +42,7 @@ const deleteSingleAuthor = (firebaseKey) => new Promise((resolve, reject) => {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-    }, 
+    },
   })
     .then((response) => response.json())
     .then((data) => resolve(data))
@@ -53,7 +53,7 @@ const deleteSingleAuthor = (firebaseKey) => new Promise((resolve, reject) => {
 const updateAuthor = () => {};
 
 // TODO: GET A SINGLE AUTHOR'S BOOKS
-// const getAuthorBooks = () => {};
+const getAuthorBooks = () => {};
 
 const favoriteAuthors = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/authors.json?orderBy="uid"&equalTo="${uid}"`, {
@@ -77,5 +77,5 @@ export {
   deleteSingleAuthor,
   updateAuthor,
   favoriteAuthors,
-  // getAuthorBooks,
+  getAuthorBooks,
 };
