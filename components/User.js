@@ -8,10 +8,10 @@ import { signOut } from '../utils/auth';
 export default function User({ userObj }) {
   return (
     <div>
-      <img alt="" />
-      <h1>{userObj.name}</h1>
+      <img alt="" src={userObj.photoURL} />
+      <h1>{userObj.displayName}</h1>
       <p>{userObj.email}</p>
-      <p>{userObj.lastlogin}</p>
+      <p>{userObj.metadata.lastSignInTime}</p>
       <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
         Sign Out
       </Button>
@@ -21,9 +21,9 @@ export default function User({ userObj }) {
 
 User.propTypes = {
   userObj: ({
-    name: PropTypes.string,
+    displayName: PropTypes.string,
     email: PropTypes.string,
-    lastlogin: PropTypes.string,
+    lastSignInInTime: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
 };
