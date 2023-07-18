@@ -23,7 +23,7 @@ User.propTypes = {
   userObj: ({
     displayName: PropTypes.string,
     email: PropTypes.string,
-    lastSignInInTime: PropTypes.string,
+    lastSignInTime: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
 };

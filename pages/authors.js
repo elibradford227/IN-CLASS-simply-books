@@ -2,15 +2,18 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
+// import { useRouter } from 'next/router';
 import AuthorCard from '../components/AuthorCard';
 import { getAuthors } from '../api/authorData';
 import { useAuth } from '../utils/context/authContext';
 
 export default function Authors() {
   const [authors, setAuthors] = useState([]);
+  // const router = useRouter();
 
   // TODO: Get user ID using useAuth Hook
   const { user } = useAuth();
+  // const { firebaseKey } = router.query;
 
   // TODO: create a function that makes the API call to get all the books
   const getAllTheAuthors = () => {
@@ -21,9 +24,10 @@ export default function Authors() {
   useEffect(() => {
     getAllTheAuthors();
   }, []);
+
   return (
     <div className="text-center my-4">
-      <Link href="/book/new" passHref>
+      <Link href="/author/new" passHref>
         <Button>Add An Author</Button>
       </Link>
       <div className="d-flex flex-wrap">
@@ -32,7 +36,6 @@ export default function Authors() {
           <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllTheAuthors} />
         ))}
       </div>
-
     </div>
   );
 }
