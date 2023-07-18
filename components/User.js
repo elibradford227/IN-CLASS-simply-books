@@ -21,6 +21,7 @@ export default function User({ userObj }) {
 
 User.propTypes = {
   userObj: ({
+    photoURL: PropTypes.string,
     displayName: PropTypes.string,
     email: PropTypes.string,
     lastSignInTime: PropTypes.string,
