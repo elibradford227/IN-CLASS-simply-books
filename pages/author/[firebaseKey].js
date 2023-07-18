@@ -18,6 +18,7 @@ export default function ViewAuthor() {
   // TODO: make call to API layer to get the data
   useEffect(() => {
     getAllTheAuthors();
+    console.warn(authorDetails);
   }, [firebaseKey]);
 
   return (
