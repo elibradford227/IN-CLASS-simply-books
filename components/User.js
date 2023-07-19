@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Button } from 'react-bootstrap';
@@ -20,10 +21,11 @@ export default function User({ userObj }) {
 }
 
 User.propTypes = {
-  userObj: ({
+  userObj: PropTypes.shape({
     photoURL: PropTypes.string,
     displayName: PropTypes.string,
     email: PropTypes.string,
+    metadata: PropTypes.object,
     lastSignInTime: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,

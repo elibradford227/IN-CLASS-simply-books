@@ -88,31 +88,6 @@ function AuthorForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* AUTHOR SELECT
-      <FloatingLabel controlId="floatingSelect" label="Author">
-        <Form.Select
-          aria-label="Author"
-          name="author_id"
-          onChange={handleChange}
-          className="mb-3"
-          value={authors.firebaseKey} // FIXME: modify code to remove error
-          required
-        >
-          <option value="">Select an Author</option>
-          {
-            authors.map((author) => (
-              <option
-                key={author.firebaseKey}
-                value={author.firebaseKey}
-              >
-                {author.first_name} {author.last_name}
-              </option>
-            ))
-          }
-        </Form.Select>
-      </FloatingLabel> */}
-
-      {/* DESCRIPTION TEXTAREA  */}
       <FloatingLabel controlId="floatingInput4" label="Author Last Name" className="mb-3">
         <Form.Control
           type="text"
