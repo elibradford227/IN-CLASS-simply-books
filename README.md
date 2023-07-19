@@ -1,5 +1,7 @@
 # Simply Books
 
+[Final Deployed Project](https://cute-tartufo-2e08b7.netlify.app/)
+
 [See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
 
 - [Get Started](#get-started)
